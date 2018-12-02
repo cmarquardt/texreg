@@ -9,114 +9,114 @@
 \description{Conversion of R regression output to LaTeX or HTML tables.}
 \usage{
 
-texreg(l, file = NULL, single.row = FALSE, 
-    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL, 
+texreg(l, file = NULL, single.row = FALSE,
+    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL,
     custom.coef.names = NULL, custom.coef.map = NULL,
-    custom.gof.names = NULL, custom.note = NULL, digits = 2, 
-    leading.zero = TRUE, symbol = "\\\\cdot", override.coef = 0, 
-    override.se = 0, override.pvalues = 0, override.ci.low = 0, 
-    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL, 
-    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0, 
-    groups = NULL, custom.columns = NULL, custom.col.pos = NULL, bold = 0.00, 
-    center = TRUE, caption = "Statistical models", caption.above = FALSE, 
+    custom.gof.names = NULL, custom.note = NULL, digits = 2, scientific = NULL,
+    leading.zero = TRUE, symbol = "\\\\cdot", override.coef = 0,
+    override.se = 0, override.pvalues = 0, override.ci.low = 0,
+    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL,
+    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0,
+    groups = NULL, custom.columns = NULL, custom.col.pos = NULL, bold = 0.00,
+    center = TRUE, caption = "Statistical models", caption.above = FALSE,
     label = "table:coefficients", booktabs = FALSE, dcolumn = FALSE, lyx = FALSE,
-    sideways = FALSE, longtable = FALSE, use.packages = TRUE, table = TRUE, 
+    sideways = FALSE, longtable = FALSE, use.packages = TRUE, table = TRUE,
     no.margin = FALSE, fontsize = NULL, scalebox = NULL, float.pos = "", ...)
 
-htmlreg(l, file = NULL, single.row = FALSE, 
-    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL, 
-    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL, 
-    custom.note = NULL, digits = 2, leading.zero = TRUE, star.symbol = '*', 
-    symbol = "&middot;", override.coef = 0, override.se = 0, override.pvalues = 0, 
-    override.ci.low = 0, override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL, 
-    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0, 
-    groups = NULL, custom.columns = NULL, 
-    custom.col.pos = NULL, bold = 0.00, center = TRUE, 
-    caption = "Statistical models", caption.above = FALSE, 
-    inline.css = TRUE, doctype = TRUE, html.tag = FALSE, 
-    head.tag = FALSE, body.tag = FALSE, indentation = "", 
-    vertical.align.px = 0, ...) 
+htmlreg(l, file = NULL, single.row = FALSE,
+    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL,
+    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL,
+    custom.note = NULL, digits = 2, scientific = NULL, leading.zero = TRUE, star.symbol = '*',
+    symbol = "&middot;", override.coef = 0, override.se = 0, override.pvalues = 0,
+    override.ci.low = 0, override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL,
+    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0,
+    groups = NULL, custom.columns = NULL,
+    custom.col.pos = NULL, bold = 0.00, center = TRUE,
+    caption = "Statistical models", caption.above = FALSE,
+    inline.css = TRUE, doctype = TRUE, html.tag = FALSE,
+    head.tag = FALSE, body.tag = FALSE, indentation = "",
+    vertical.align.px = 0, ...)
 
-screenreg(l, file = NULL, single.row = FALSE, stars = c(0.001, 
-    0.01, 0.05), custom.model.names = NULL, 
+screenreg(l, file = NULL, single.row = FALSE, stars = c(0.001,
+    0.01, 0.05), custom.model.names = NULL,
     custom.coef.names = NULL, custom.coef.map = NULL,
-    custom.gof.names = NULL, custom.note = NULL, digits = 2, 
-    leading.zero = TRUE, star.symbol = '*', symbol = ".", override.coef = 0, 
-    override.se = 0, override.pvalues = 0, override.ci.low = 0, 
-    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL, 
-    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, 
-    ci.test = 0, groups = NULL, custom.columns = NULL, 
-    custom.col.pos = NULL, column.spacing = 2, outer.rule = "=", 
+    custom.gof.names = NULL, custom.note = NULL, digits = 2, scientific = NULL,
+    leading.zero = TRUE, star.symbol = '*', symbol = ".", override.coef = 0,
+    override.se = 0, override.pvalues = 0, override.ci.low = 0,
+    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL,
+    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95,
+    ci.test = 0, groups = NULL, custom.columns = NULL,
+    custom.col.pos = NULL, column.spacing = 2, outer.rule = "=",
     inner.rule = "-", ...)
 
-matrixreg(l, single.row = FALSE, 
-    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL, 
-    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL, 
-    digits = 2, leading.zero = TRUE, star.symbol = '*', symbol = ".", 
-    override.coef = 0, override.se = 0, override.pvalues = 0, override.ci.low = 0, 
-    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL, 
+matrixreg(l, single.row = FALSE,
+    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL,
+    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL,
+    digits = 2, scientific = NULL, leading.zero = TRUE, star.symbol = '*', symbol = ".",
+    override.coef = 0, override.se = 0, override.pvalues = 0, override.ci.low = 0,
+    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL,
     reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0, bold = 0,
-    groups = NULL, custom.columns = NULL, custom.col.pos = NULL, 
-    dcolumn = TRUE, ...) 
+    groups = NULL, custom.columns = NULL, custom.col.pos = NULL,
+    dcolumn = TRUE, ...)
 
 csvreg(l, file,
-    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL, 
-    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL, 
-    custom.note = NULL, digits = 2, leading.zero = TRUE, star.symbol = '*', symbol = ".", 
-    override.coef = 0, override.se = 0, override.pvalues = 0, override.ci.low = 0, 
-    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL, 
-    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0, 
-    groups = NULL, custom.columns = NULL, custom.col.pos = NULL, 
+    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL,
+    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL,
+    custom.note = NULL, digits = 2, scientific = NULL, leading.zero = TRUE, star.symbol = '*', symbol = ".",
+    override.coef = 0, override.se = 0, override.pvalues = 0, override.ci.low = 0,
+    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL,
+    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0,
+    groups = NULL, custom.columns = NULL, custom.col.pos = NULL,
     caption = 'Statistical Models', ...)
- 
-wordreg(l, file = NULL, single.row = FALSE, 
-    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL, 
-    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL, 
-    digits = 2, leading.zero = TRUE, star.symbol = star.symbol, symbol = ".", 
-    override.coef = 0, override.se = 0, override.pvalues = 0, override.ci.low = 0, 
-    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL, 
-    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0, 
+
+wordreg(l, file = NULL, single.row = FALSE,
+    stars = c(0.001, 0.01, 0.05), custom.model.names = NULL,
+    custom.coef.names = NULL, custom.coef.map = NULL, custom.gof.names = NULL,
+    digits = 2, scientific = NULL, leading.zero = TRUE, star.symbol = star.symbol, symbol = ".",
+    override.coef = 0, override.se = 0, override.pvalues = 0, override.ci.low = 0,
+    override.ci.up = 0, omit.coef = NULL, reorder.coef = NULL,
+    reorder.gof = NULL, ci.force = FALSE, ci.force.level = 0.95, ci.test = 0,
     groups = NULL, custom.columns = NULL, custom.col.pos = NULL, ...)
 
 }
 \details{
-texreg converts coefficients, standard errors, significance stars, 
-and goodness-of-fit statistics of statistical models into LaTeX 
-tables or HTML tables or into nicely formatted screen output for 
-the R console. A list of several models can be combined in a 
-single table. The output is customizable. New model types can be 
-easily implemented. Confidence intervals can be used instead of 
+texreg converts coefficients, standard errors, significance stars,
+and goodness-of-fit statistics of statistical models into LaTeX
+tables or HTML tables or into nicely formatted screen output for
+the R console. A list of several models can be combined in a
+single table. The output is customizable. New model types can be
+easily implemented. Confidence intervals can be used instead of
 standard errors and p values.
 
-The \code{texreg()} function creates LaTeX code for inclusion 
+The \code{texreg()} function creates LaTeX code for inclusion
 in a LaTeX document or for usage with \pkg{Sweave} or \pkg{knitr}.
 
-The \code{htmlreg()} function creates HTML code. Tables in HTML 
-format can be saved with a ".html" extension and displayed in 
-a web browser. Alternatively, they can be saved with a ".doc" 
-extension and opened in MS Word for inclusion in office 
-documents. \code{htmlreg()} also works with \pkg{knitr} and HTML 
-or Markdown. Note that the \code{inline.css}, \code{doctype}, 
-\code{html.tag}, \code{head.tag}, and \code{body.tag} arguments 
-must be adjusted for the different purposes (see the description 
+The \code{htmlreg()} function creates HTML code. Tables in HTML
+format can be saved with a ".html" extension and displayed in
+a web browser. Alternatively, they can be saved with a ".doc"
+extension and opened in MS Word for inclusion in office
+documents. \code{htmlreg()} also works with \pkg{knitr} and HTML
+or Markdown. Note that the \code{inline.css}, \code{doctype},
+\code{html.tag}, \code{head.tag}, and \code{body.tag} arguments
+must be adjusted for the different purposes (see the description
 of the arguments).
 
-The \code{screenreg()} function creates text representations of 
-tables and prints them to the R console. This is an alternative 
-to the \code{summary} method and serves easy model comparison. 
-Moreover, once a table has been prepared in the R console, it 
-can be later exported to LaTeX or HTML with little extra effort 
-because the majority of arguments of the three functions is 
+The \code{screenreg()} function creates text representations of
+tables and prints them to the R console. This is an alternative
+to the \code{summary} method and serves easy model comparison.
+Moreover, once a table has been prepared in the R console, it
+can be later exported to LaTeX or HTML with little extra effort
+because the majority of arguments of the three functions is
 identical.
 
 The \code{wordreg()} function creates a Microsoft Word document with the
-requested table. 
+requested table.
 
-The \code{matrixreg()} function creates text representations of 
-tables and prints them to the R console. 
+The \code{matrixreg()} function creates text representations of
+tables and prints them to the R console.
 
 The \code{csvreg()} function creates a spreadsheet in CSV containing the
-information in the tables. 
+information in the tables.
 
 }
 \arguments{
@@ -131,8 +131,8 @@ Sometimes it happens that the same variable has a different name in different mo
 
 Where the argument contains an \code{NA} value, the original name of the coefficient is kept. For example, \code{custom.coef.names = c(NA, "age", NA)} will only replace the second coef name and leave the first and third name as they are in the original model.}
 \item{custom.coef.map}{The \code{custom.coef.map} argument can be used to select, omit, rename, and reorder coefficients.
-    
-Users must supply a named list of this form: \code{list('x' = 'First variable', 'y' = NA, 'z' = 'Third variable')}. With that particular example of \code{custom.coef.map}, 
+
+Users must supply a named list of this form: \code{list('x' = 'First variable', 'y' = NA, 'z' = 'Third variable')}. With that particular example of \code{custom.coef.map},
 
 1. coefficients will presented in order: x, y, z.
 
@@ -142,6 +142,7 @@ Users must supply a named list of this form: \code{list('x' = 'First variable', 
 \item{custom.gof.names}{A character vector which is used to replace the names of the goodness-of-fit statistics at the bottom of the table. The vector must have the same length as the number of GOF statistics in the final table. The argument works like the \code{custom.coef.names} argument, but for the GOF values. \code{NA} values can be included where the original GOF name should be kept.}
 \item{custom.note}{With this argument, a replacement text for the significance note below the table can be provided. If an empty character object is provided (\code{custom.note = ""}), the note will be omitted completely. If some character string is provided (e.g., \code{custom.note = "My note"}), the significance legend is replaced by \code{My note}. The original significance legend can be included by inserting the \code{\%stars} wildcard. For example, a custom note can be added right after the significance legend by providing \code{custom.note = "\%stars. My note"}.}
 \item{digits}{Set the number of decimal places for coefficients, standard errors and goodness-of-fit statistics. Do not use negative values! The argument works like the \code{digits} argument in the \code{round} function of the \pkg{base} package.}
+\item{scientific}{Set to \code{TRUE} in order to enforce scientific number formatting for coefficients, standard errors and goodness-of-fit statistics. Automatic switching between fixed and scietific notation set to an integer value; this is the same as setting \code{options(scipen)}. Overall, the argument works like the \code{scientific} argument in the \code{format} function of the \pkg{base} package.}
 \item{leading.zero}{Most journals require leading zeros of coefficients and standard errors (for example, \code{0.35}). This is also the default texreg behavior. Some journals, however, require omission of leading zeros (for example, \code{.35}). This can be achieved by setting \code{leading.zero = FALSE}.}
 \item{symbol}{If four threshold values are handed over to the \code{stars} argument, p values smaller than the largest threshold value but larger than the second-largest threshold value are denoted by this symbol. The default symbol is \code{"\\\\cdot"} for the LaTeX dot, \code{"&middot;"} for the HTML dot, or simply \code{"."} for the ASCII dot. If the \code{texreg} function is used, any other mathematical LaTeX symbol or plain text symbol can be used, for example \code{symbol = "\\\\circ"} for a small circle (note that backslashes must be escaped). If the \code{htmlreg} function is used, any other HTML character or symbol can be used. For the \code{screenreg} function, only plain text characters can be used.}
 \item{override.coef}{Set custom values for the coefficients. New coefficients are provided as a list of numeric vectors. The list contains vectors of coefficients for each model. There must be as many vectors of coefficients as there are models. For example, if there are two models with three model terms each, the argument could be specified as \code{override.coef = list(c(0.1, 0.2, 0.3), c(0.05, 0.06, 0.07))}. If there is only one model, custom values can be provided as a plain vector (not embedded in a list). For example: \code{override.coef = c(0.05, 0.06, 0.07)}.}
@@ -192,7 +193,7 @@ Users must supply a named list of this form: \code{list('x' = 'First variable', 
 \item{...}{Custom options to be passed on to the extract function. For example, most extract methods provide custom options for the inclusion or exclusion of specific goodness-of-fit statistics. See the help entries of \link{extract} and \link{extract-methods} for more information.}
 }
 \references{
-Leifeld, Philip (2013). texreg: Conversion of Statistical Model Output in R to 
+Leifeld, Philip (2013). texreg: Conversion of Statistical Model Output in R to
 LaTeX and HTML Tables. Journal of Statistical Software, 55(8), 1-24.
 \url{http://www.jstatsoft.org/v55/i08/}.
 }
@@ -219,8 +220,8 @@ table.string <- texreg(lm.D9, return.string = TRUE)
 cat(table.string)
 
 #Create a 'fake' Office document containing a regression table
-htmlreg(list(model.1, model.2), file = "texreg.doc", 
-    inline.css = FALSE, doctype = TRUE, html.tag = TRUE, 
+htmlreg(list(model.1, model.2), file = "texreg.doc",
+    inline.css = FALSE, doctype = TRUE, html.tag = TRUE,
     head.tag = TRUE, body.tag = TRUE)
 unlink("texreg.doc")
 }
